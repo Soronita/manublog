@@ -1,0 +1,19 @@
+<h1>Blog editieren</h1>
+
+  <%= form_tag "/posts/update", method: "put" do %>
+	<div>
+		<label for="subject">Subject</label>
+		<input type="text" name="subject" value="<%= @post.subject %>">
+	</div>
+	<div>
+		<label for="entry">Entry</label>
+		<input type="text" name="entry" value="<%= @post.entry %>">
+	</div>
+
+	<input type="hidden" name="id" value="<%= @post.id %>">
+	
+	<div>
+		<input type="submit">
+	</div>
+
+<% end %>

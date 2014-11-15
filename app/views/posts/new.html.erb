@@ -1,0 +1,17 @@
+<h1>Neuer Blogpost</h1>
+
+  <%= form_tag "/posts/create", method: "post" do %>
+	<div>
+		<label for="subject">Subject</label>
+		<input type="text" name="subject">
+	</div>
+	<div>
+		<label for="entry">Entry</label>
+		<input type="text" name="entry">
+	</div>
+
+	<div>
+		<input type="submit">
+	</div>
+
+<% end %>

@@ -1,0 +1,19 @@
+<!-- http://localhost:3000/posts/new -->
+<a href="<%= posts_new_path %>"> neu </a>
+<hr>
+<!--
+	@posts = [
+		post1,
+		post2,
+		...
+	]
+-->
+<% @posts.each do |post| %>
+	<div> <%= post.subject %> </div>
+	<div> <%= post.entry %> </div>
+	<div> 
+		<a href="<%= posts_edit_path(post.id) %>"> editieren </a>
+		<a href="<%= posts_delete_path(post.id) %>"> löschen </a>
+	</div>
+	<hr>
+<% end %>
